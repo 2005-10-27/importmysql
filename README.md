@@ -28,7 +28,6 @@ SQL 文件导入工具
 安装过程中勾选 "Add Python to PATH" 选项，以便在命令行中直接使用 Python
 安装依赖库
 bash
-复制
 pip install pymysql
 pip install tk
 pymysql：用于与 MySQL 数据库进行交互
@@ -36,13 +35,11 @@ tk：用于创建图形化界面
 下载本项目
 从项目仓库克隆代码或下载 ZIP 文件
 bash
-复制
-git clone <repository-url>
+git clone https://github.com/2005-10-27/importmysql.git
 解压下载的 ZIP 文件到目标目录
 配置 MySQL 信息
 在代码中修改以下数据库连接配置：
 Python
-复制
 self.host = "localhost"
 self.user = "root"
 self.password = "123456"
@@ -58,7 +55,6 @@ mysql_path：MySQL 客户端可执行文件路径，根据实际安装路径修�
 打开命令行，导航到项目目录
 运行以下命令启动应用程序：
 bash
-复制
 python importTest.py
 选择 SQL 文件
 选择目录
@@ -174,8 +170,8 @@ process_import 方法
 完成导入后弹出提示框
 提供生成日志文件的选项
 示例截图
-以下是工具界面的示例截图：
-screenshot.png
+见Clone的图片：
+Snipaste_2025-05-09_17-21-20.png
 文件选择区域：显示已选择的 SQL 文件列表
 导入模式选择：提供两种导入模式的单选按钮
 目标数据库输入框：在“导入到指定数据库”模式下输入目标数据库名称
@@ -192,7 +188,7 @@ A3: 导入过程中的所有操作都会记录在日志区域。您可以通过�
 Q4: 是否可以自定义数据库字符集？
 A4: 当前版本使用 UTF-8MB4 作为默认字符集。如果需要自定义字符集，可以在 import_sql_file 方法中修改命令参数。例如：
 Python
-复制
+
 cmd = [
     self.mysql_path,
     "-h", self.host,
@@ -204,10 +200,11 @@ cmd = [
 Q5: 如何更新 MySQL 客户端路径？
 A5: 在代码中找到以下行，修改 mysql_path 为您实际的 MySQL 客户端可执行文件路径：
 Python
-复制
+
 self.mysql_path = r"your\mysql\path\here\mysql.exe"
 联系我们
 如果您在使用过程中遇到任何问题或有任何建议，请通过以下方式联系我们：
-邮箱：[your-email@example.com]
-GitHub 仓库：[repository-url]
+Gmail邮箱：xjlverycool@gmail.com
+QQ邮箱：2043586842@qq.com
+GitHub 仓库：https://github.com/2005-10-27/
 希望本工具能为您的数据库管理工作带来便利！
